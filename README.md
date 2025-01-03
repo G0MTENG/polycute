@@ -13,12 +13,14 @@ const name = obj && obj.user && obj.user.name
 
 
 3. 빈 배열에 아래 일련의 과정을 거칠 경우, 배열에 담긴 내용을 작성하시오.
-  1. push('a')
+
+  - 1. push('a')
   -> ['a'], 1을 반환합니다.
-  2. shift()
+  - 2. shift()
   -> [], 'a'를 반환합니다.
-  3. unshift()
+  - 3. unshift()
   -> ['a'], 1을 반환합니다.
+
 
 4. Promise에 대해 서술하고, Promise를 사용할 때 주의할 점을 2가지 이상 서술하시오.
 
