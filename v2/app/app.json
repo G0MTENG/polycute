@@ -15,7 +15,10 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "com.google.android.gms.permission.AD_ID"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -36,12 +39,20 @@
       [
         "expo-tracking-transparency",
         {
-          "userTrackingPermission": "This identifier will be used to deliver personalized ads to you."
+          "userTrackingPermission": "이 식별자는 개인 맞춤형 광고를 제공하는 데 사용됩니다."
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "be0092ca-3ff8-41cd-a96b-a3b2560e8b9d"
+      }
     }
   }
 }
