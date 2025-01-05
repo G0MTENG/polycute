@@ -2,8 +2,8 @@ import { ListItem } from '@/components/ListItem'
 import { prisma } from '@/lib'
 import { formatDateKo } from '@/utils/date'
 
-export default async function Page({ params }: { params: { adId: string } }) {
-  const adId = params.adId
+export default async function Page({ params }: { params: Promise<{ adId: string }>}) {
+  const adId = (await params).adId
   const user = await prisma.user.findUnique({
     where: { adId },
   })
