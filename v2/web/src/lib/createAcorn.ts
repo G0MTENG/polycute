@@ -4,6 +4,7 @@ import { prisma } from './prisma'
 
 export async function createAcorn(formData: FormData) {
   const document = formData.get('document') as string
+  const title = formData.get('title') as string
   const userId = Number(formData.get('userId'))
 
   if (userId === -1) {
@@ -13,6 +14,7 @@ export async function createAcorn(formData: FormData) {
   try {
     await prisma.acorn.create({
       data: {
+        title,
         document,
         userId,
       },

@@ -21,7 +21,7 @@ export const ListItem = ({ id, title, date }: ListItemProps) => {
     >
       <Image src={Acorn} alt='acorn' width={32} height={32} className='rounded-full' />
       <h2 className='text-lg font-bold'>{title}</h2>
-      <p className='flex-1 text-right text-sm text-[#ccc]'>{date.split('T')[0]}</p>
+      <p className='flex-1 text-right text-sm text-[#ccc]'>{date}</p>
     </li>
   )
 }

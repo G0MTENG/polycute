@@ -1,5 +1,6 @@
 import { ReactMarkdown } from '@/components'
 import { prisma } from '@/lib'
+import { formatDateKo } from '@/utils/date'
 
 export const revalidate = 60
 
@@ -23,23 +24,13 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
 
   const { title, createdAt, document } = acorn
 
-  const markdownData = `
-  # This is a H1
-  ## This is a H2
-  ### This is a H3
-
-  ~~~ts
-  const foo: string = 'bar'
-  ~~~
-  `
-
   return (
     <main className='size-full p-4 flex flex-col gap-4 overflow-y-auto'>
       <header className='flex flex-col gap-2'>
         <h1 className='text-3xl font-bold text-gray-800'>{title}</h1>
-        <p className='text-gray-500 text-sm'>{new Date(createdAt).toLocaleDateString()}</p>
+        <p className='text-gray-500 text-sm'>{formatDateKo(createdAt)}</p>
       </header>
-      <ReactMarkdown>{markdownData}</ReactMarkdown>
+      <ReactMarkdown>{document}</ReactMarkdown>
     </main>
   )
 }

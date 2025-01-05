@@ -1,9 +1,10 @@
 import { useUserId } from '@/components'
 import { BackHeaderLayout } from '@/components/BackHeaderLayout'
+import { Button } from '@/components/Button'
 import { WEBVIEW_URI } from '@/constants/uris'
 import { useRouter } from 'expo-router'
 import { useState } from 'react'
-import { Pressable, ScrollView, StyleSheet, Text, TextInput } from 'react-native'
+import { ScrollView, StyleSheet, Text, TextInput } from 'react-native'
 
 export default function Write() {
   const [userId] = useUserId()
@@ -60,9 +61,7 @@ export default function Write() {
           multiline
           textAlignVertical='top'
         />
-        <Pressable style={styles.button} onPress={handleSubmit}>
-          <Text style={styles.buttonText}>작성하기</Text>
-        </Pressable>
+        <Button onPress={handleSubmit}>저장하기</Button>
       </ScrollView>
     </BackHeaderLayout>
   )
@@ -91,18 +90,5 @@ const styles = StyleSheet.create({
   textarea: {
     flex: 1,
     minHeight: 120,
-  },
-  button: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#422223',
-    borderRadius: 6,
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 16,
-    padding: 12,
   },
 })

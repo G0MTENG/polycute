@@ -9,7 +9,11 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSUserTrackingUsageDescription": "앱에서 개인화된 광고를 제공하기 위해 사용합니다."
+      },
+      "bundleIdentifier": "com.gomteng03.app"
     },
     "android": {
       "adaptiveIcon": {
@@ -18,7 +22,8 @@
       },
       "permissions": [
         "com.google.android.gms.permission.AD_ID"
-      ]
+      ],
+      "package": "com.gomteng03.app"
     },
     "web": {
       "bundler": "metro",

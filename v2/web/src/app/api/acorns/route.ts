@@ -1,21 +1,11 @@
 import { prisma } from '@/lib/prisma'
 
 export async function GET(request: Request) {
-  console.log('GET /api/acorns')
   const { searchParams } = new URL(request.url)
   const userId = Number(searchParams.get('userId'))
 
   if (userId === 0) {
-    const acorns = await prisma.acorn.findMany()
-
-    if (!acorns) {
-      return new Response(null, { status: 404 })
-    }
-
-    return new Response(JSON.stringify(acorns), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    })
+    return new Response(null, { status: 400 })
   }
 
   const user = await prisma.user.findUnique({ where: { id: userId } })
