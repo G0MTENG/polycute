@@ -21,7 +21,7 @@ export default async function Page({ params }: { params: Promise<{ adId: string 
 
   return (
     <ul className='size-full overflow-y-auto px-4 pb-4 flex flex-col gap-4'>
-      {acorns.map(({ id, title, createdAt }) => {
+      {acorns.length === 0 ? <div>데이터를 추가해보세요.</div> : acorns.map(({ id, title, createdAt }) => {
         const date = formatDateKo(createdAt)
         return <ListItem key={id} id={id} title={title} date={date} />
       })}
