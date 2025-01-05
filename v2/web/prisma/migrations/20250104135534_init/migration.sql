@@ -10,6 +10,7 @@ CREATE TABLE `User` (
 -- CreateTable
 CREATE TABLE `Acorn` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `title` VARCHAR(191) NOT NULL,
     `document` VARCHAR(191) NOT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `userId` INTEGER NOT NULL,

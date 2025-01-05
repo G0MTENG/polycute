@@ -9,7 +9,8 @@ export default function RootLayout() {
         <Stack.Screen
           name='read'
           options={{
-            headerTitle: '글읽기',
+            headerTitle: '',
+            headerTransparent: true,
             headerStyle: {
               backgroundColor: 'transparent',
             },

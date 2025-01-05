@@ -13,15 +13,16 @@ export default function Error({
   reset: () => void
 }) {
   useEffect(() => {
-    // Log the error to an error reporting service
-    console.error(error)
+    window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'back', payload: null }))
   }, [error])
 
   return (
     <div className='size-full overflow-y-auto flex flex-col items-center justify-center px-4 pb-4 gap-4'>
       <Image src={Acorn} alt='Acorn' width={100} height={100} />
       <h2>에러가 발생했습니다.</h2>
-      <Button onClick={() => reset()}>다시 시도하기</Button>
+      <Button className='max-w-80' onClick={() => reset()}>
+        돌아가기
+      </Button>
     </div>
   )
 }

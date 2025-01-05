@@ -1,7 +1,7 @@
 export declare global {
   interface Window {
     ReactNativeWebview: {
-      postMessage: (message: any) => void;
-    };
+      postMessage: (message: any) => void
+    }
   }
 }

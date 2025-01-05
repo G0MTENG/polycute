@@ -1,18 +1,10 @@
-import { SafeAreaView, StyleSheet, Text } from 'react-native'
-import { useHeaderHeight } from '@react-navigation/elements'
+import { Slot } from 'expo-router'
+import { BackHeaderLayout } from '@/components'
 
 export default function Read() {
-  const headerHeight = useHeaderHeight()
-
   return (
-    <SafeAreaView style={[styles.container, { paddingTop: headerHeight }]}>
-      <Text>읽기 페이지</Text>
-    </SafeAreaView>
+    <BackHeaderLayout>
+      <Slot />
+    </BackHeaderLayout>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-})
