@@ -241,3 +241,16 @@ if (path) {
   console.log('경로를 찾을 수 없습니다.')
 }
 ```
+
+# 2번째 과제
+
+### 다운로드
+
+[링크](https://expo.dev/accounts/gomteng03/projects/app/builds/e60bcdd2-fa4f-43d9-b8f7-f5e5d57088c7)
+![QR](./images/QR.png)
+
+### 기능 소개
+- 광고 ID를 통해 사용자를 식별하고, 마크다운 문법을 활용하여 메모를 작성하고 관리할 수 있습니다.
+- Next.js와 Vercel을 사용하여 빠르게 애플리케이션을 배포할 수 있었습니다.
+- 또한, Next.js를 통해 별도 API 서버를 개발하지 않고 웹뷰를 개발할 수 있었습니다.
+- 메모 부분은 ISR을 적용하여 더 빠르게 웹사이트가 렌더링할 수 있도록 개발했습니다.
